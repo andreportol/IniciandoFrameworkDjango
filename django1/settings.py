@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-l#5*oaor46h(0pwvqvvry_*((3^3ti(5^7_s_rb^4kz504)lv=
 # debug com valor False, modo produção
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -121,6 +121,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/' # usado durante o desenvolvimento
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles') # usado durante o desenvolvimento
+
+LOGOUT_REDIRECT_URL = 'index'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 

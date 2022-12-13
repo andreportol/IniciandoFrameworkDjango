@@ -12,31 +12,33 @@
 </head>
 
 <body>
-    <!--conteudo é uma chave de vem de view do app core-->
-    <h1>{{ Conteudo }}</h1>
-    <h1>Primeiro projeto Django!</h1>
-    <h2>Projeto Django1</h2>
-    <p>Aplicação core</p>
-    <span>Página principal (raiz)</span>
-    <img src="{% static 'images/logoDjango.png' %} " alt="imagem framework django">
-    <table>
-        <thead>
-            <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for produto in produtos %}
-            <tr>
-                <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
-                <td>{{ produto.preco }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <button onclick="teste()">Clique-me</button>
-
+    <center>
+        <!--conteudo é uma chave de vem de view do app core-->
+        <h1>{{ Conteudo }}</h1>
+        <h1>Primeiro projeto Django!</h1>
+        <h2>Projeto Django1</h2>
+        <p>Aplicação core</p>
+        <span>Página principal (raiz)</span>
+        <img src="{% static 'images/logoDjango.png' %} " alt="imagem framework django">
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produto in produtos %}
+                <tr>
+                    <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
+                    <td>{{ produto.preco }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button onclick="teste()">Clique-me</button>
+    </center>
     <script src="{% static 'js/script.js' %}"></script>
 </body>
+
 </html>
